@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>ShadowTools - Dark Tools Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loading-screen">
+    <div class="loading-text">Initializing... </div>
+</div>
+
+<nav class="navbar">
+    <div class="nav-logo">ShadowTools</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#formPaket">Form Paket</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#tools">Tools</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h1>Welcome to ShadowTools</h1>
+    <p>Dark tools for those who dare to control the chaos.</p>
+</section>
+
+<section id="formPaket">
+    <h2>Form Pemesanan Paket</h2>
+    <p>Pilih paket yang sesuai dengan kebutuhanmu:</p>
+    <ul>
+        <li>Paket Basic - Spam 100 Chat (Rp 15.000)</li>
+        <li>Paket Pro - Spam 500 Chat (Rp 50.000)</li>
+        <li>Paket Ultimate - Spam 2000 Chat (Rp 150.000)</li>
+        <li>Paket Uji Coba - Spam 20 Chat (Gratis)</li>
+    </ul>
+    <p>Hubungi kami langsung melalui WhatsApp untuk pemesanan.</p>
+</section>
+
+<section id="testimonials">
+    <h2>Testimonials</h2>
+    <p>"Spam brutal, bikin target merinding!" - Anonimus</p>
+    <p>"Toolsnya gelap, brutal, dan beneran works." - Mr.X</p>
+    <p>"Kalau mau balas dendam elegan, ini jawabannya." - DarkHunter</p>
+</section>
+
+<section id="tools">
+    <h2>Our Tools Collection</h2>
+    <ul>
+        <li><strong>Bot WA Spam</strong> - Kirim ribuan pesan otomatis dalam hitungan detik.</li>
+        <li><strong>IP Lookup</strong> - Cari tahu informasi lengkap dari IP target.</li>
+        <li><strong>Phone Info</strong> - Menggali data tersembunyi dari nomor HP.</li>
+        <li><strong>Email Extractor</strong> - Mengambil email tersembunyi dari target.</li>
+        <li><strong>System Info Grabber</strong> - Mengintip detail device target via Termux link.</li>
+    </ul>
+</section>
+
+<footer class="bg-black text-white py-6 border-t border-gray-800">
+    <div class="container mx-auto text-center space-y-4">
+        <p class="text-sm">&copy; 2025 ShadowTools. All rights reserved.</p>
+        
+        <div class="flex justify-center space-x-6 text-sm">
+            <a href="#home" class="hover:text-red-500 transition">Home</a>
+            <a href="#form-paket" class="hover:text-red-500 transition">Paket</a>
+            <a href="#tools" class="hover:text-red-500 transition">Tools</a>
+            <a href="#contact" class="hover:text-red-500 transition">Contact</a>
+        </div>
+
+        <p class="text-xs text-gray-400 max-w-md mx-auto italic">
+            Semua tools di website ini dibuat hanya untuk kepentingan edukasi & pengujian keamanan.  
+            Penyalahgunaan sepenuhnya tanggung jawab user.  
+            <br>
+            "Kegelapan bukan ancaman, melainkan pengingat bahwa cahaya selalu diawasi." - ShadowTools
+        </p>
+
+        <p class="text-xs text-gray-500">Website Developed by ShadowTools Team (Putra & Moses)</p>
+    </div>
+</footer>
+
+<script>
+    setTimeout(() => {
+        document.querySelector('.loading-screen').style.display = 'none';
+        document.querySelector('#main-content').style.display = 'block';
+    }, 1200); // Loading 1.2 detik
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop - 70,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
